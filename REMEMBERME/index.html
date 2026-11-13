@@ -16,16 +16,17 @@
 <button onclick="unlock()">Unlock</button>
 
 <p id="link"></p>
-
 <script>
 function unlock() {
-    if (document.getElementById("pass").value.toLowerCase() === "fear") {
+    const password = document.getElementById("pass").value.trim().toLowerCase();
+
+    if (password === "fear") {
         document.getElementById("link").innerHTML =
         '<a href="https://archive.org/details/ogbpbqbgbpuvbtvgbpbtu/10.JPG">AN ANSWER TO YOUR PRAYERS</a>';
-    } else if (document.getElementById("pass").value.toLowerCase() === "test") {
+    } else if (password === "test") {
         document.getElementById("link").innerHTML =
         '<a href="https://archive.org/details/ogbpbqbgbpuvbtvgbpbtu/10.JPG">CLEVER.</a>';
-        
+
     } else {
         alert("FAIL");
     }
